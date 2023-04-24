@@ -1,0 +1,45 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<mat-toolbar>
+  <span>Search</span>
+</mat-toolbar>
+
+<br />
+
+<div style="text-align: center">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="search($event)"
+    [disabled]="showProgressBar"
+  >
+    Search
+  </button>
+</div>
+
+<div *ngIf="showProgressBar">
+  <br />
+  <mat-progress-bar color="primary" mode="indeterminate"></mat-progress-bar>
+</div>
+
+<hr />
+<mat-card *ngFor="let result of resultObserver | async">
+  <strong>{{ result }}</strong>
+</mat-card>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
