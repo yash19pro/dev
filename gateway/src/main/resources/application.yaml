@@ -1,0 +1,8 @@
+spring:
+    cloud:
+        gateway:
+            routes:
+                - id: fetch_uuid
+                  uri: https://httpbin.org/
+                  predicates:
+                      - Path=/uuid
