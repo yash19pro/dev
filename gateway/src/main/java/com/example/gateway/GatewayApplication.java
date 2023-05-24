@@ -8,7 +8,7 @@ public class GatewayApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
-        System.out.println("Spring Cloud Gateway Running");
+        System.out.println("Spring Cloud Gateway Running. ohh yeah");
     }
 
 }
