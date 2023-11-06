@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1asnqg9",
+        "columns": 8
+      },
+      "id": "Field_0qzk9u3",
+      "key": "person_name",
+      "validate": {
+        "required": true
+      },
+      "description": "What is your name?",
+      "defaultValue": "Yash"
+    },
+    {
+      "label": "Age",
+      "type": "number",
+      "layout": {
+        "row": "Row_1asnqg9",
+        "columns": 8
+      },
+      "id": "Field_15umqld",
+      "key": "person_age",
+      "serializeToString": true,
+      "validate": {
+        "required": true
+      },
+      "description": "How old are you?",
+      "defaultValue": "0"
+    },
+    {
+      "values": [
+        {
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "label": "Female",
+          "value": "female"
+        }
+      ],
+      "label": "Gender",
+      "type": "radio",
+      "layout": {
+        "row": "Row_1sj95f9",
+        "columns": null
+      },
+      "id": "Field_1e475zm",
+      "key": "person_gender",
+      "defaultValue": "<none>",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_1arltlg",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.16.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 11
+}
