@@ -4,46 +4,31 @@
     <bpmn:startEvent id="StartEvent_1" name="Start">
       <bpmn:outgoing>SequenceFlow_1fp17al</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:sequenceFlow id="SequenceFlow_1fp17al" sourceRef="StartEvent_1" targetRef="enter-user-details" />
-    <bpmn:userTask id="enter-user-details" name="Enter User Details" camunda:formKey="camunda-forms:/forms/form_1.form" camunda:candidateUsers="demo">
+    <bpmn:sequenceFlow id="SequenceFlow_1fp17al" sourceRef="StartEvent_1" targetRef="stage-1" />
+    <bpmn:userTask id="stage-1" name="Stage 1" camunda:candidateUsers="demo">
       <bpmn:extensionElements />
       <bpmn:incoming>SequenceFlow_1fp17al</bpmn:incoming>
       <bpmn:outgoing>Flow_0d7ii1t</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:sequenceFlow id="Flow_0d7ii1t" sourceRef="enter-user-details" targetRef="Activity_0nnkef2" />
-    <bpmn:userTask id="Activity_0nnkef2" name="Enter External Details">
-        <!-- <extensionElements> -->
-            <!-- <camunda:formData>
-                <camunda:formField
-                    id="firstname" label="First Name" type="string">
-                    <camunda:validation>
-                    <camunda:constraint name="maxlength" config="25" />
-                    <camunda:constraint name="required" />
-                    </camunda:validation>
-                </camunda:formField>
-                <camunda:formField
-                    id="lastname" label="Last Name" type="string">
-                    <camunda:validation>
-                    <camunda:constraint name="maxlength" config="25" />
-                    <camunda:constraint name="required" />
-                    </camunda:validation>
-                </camunda:formField>
-                <camunda:formField
-                    id="dateOfBirth" label="Date of Birth" type="date" />
-            </camunda:formData> -->
-        <!-- </extensionElements> -->
+    <bpmn:sequenceFlow id="Flow_0d7ii1t" sourceRef="stage-1" targetRef="stage-2" />
+    <bpmn:userTask id="stage-2" name="Stage 2">
       <bpmn:incoming>Flow_0d7ii1t</bpmn:incoming>
-      <bpmn:outgoing>Flow_0e9rxzn</bpmn:outgoing>
+      <bpmn:outgoing>Flow_09rtitz</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:sequenceFlow id="Flow_0e9rxzn" sourceRef="Activity_0nnkef2" targetRef="Activity_1vgtg84" />
-    <bpmn:userTask id="Activity_1vgtg84" name="to check the variables">
-      <bpmn:incoming>Flow_0e9rxzn</bpmn:incoming>
-      <bpmn:outgoing>Flow_0002eqa</bpmn:outgoing>
+    <bpmn:sequenceFlow id="Flow_09rtitz" sourceRef="stage-2" targetRef="stage-3" />
+    <bpmn:userTask id="stage-3" name="Stage 3">
+      <bpmn:incoming>Flow_09rtitz</bpmn:incoming>
+      <bpmn:outgoing>Flow_117p5pl</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:endEvent id="Event_128ffxv">
-      <bpmn:incoming>Flow_0002eqa</bpmn:incoming>
+    <bpmn:sequenceFlow id="Flow_117p5pl" sourceRef="stage-3" targetRef="stage-4" />
+    <bpmn:userTask id="stage-4" name="Stage 4">
+      <bpmn:incoming>Flow_117p5pl</bpmn:incoming>
+      <bpmn:outgoing>Flow_10ibmzi</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_0px528y">
+      <bpmn:incoming>Flow_10ibmzi</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_0002eqa" sourceRef="Activity_1vgtg84" targetRef="Event_128ffxv" />
+    <bpmn:sequenceFlow id="Flow_10ibmzi" sourceRef="stage-4" targetRef="Event_0px528y" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="UserDetailsProcess">
@@ -53,18 +38,23 @@
           <dc:Bounds x="187" y="142" width="24" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="UserTask_08mft2c_di" bpmnElement="enter-user-details">
+      <bpmndi:BPMNShape id="UserTask_08mft2c_di" bpmnElement="stage-1">
         <dc:Bounds x="290" y="77" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1r6i97r_di" bpmnElement="Activity_0nnkef2">
+      <bpmndi:BPMNShape id="Activity_1r6i97r_di" bpmnElement="stage-2">
         <dc:Bounds x="470" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0v82yo2_di" bpmnElement="Activity_1vgtg84">
-        <dc:Bounds x="660" y="190" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_0lourup_di" bpmnElement="stage-3">
+        <dc:Bounds x="670" y="77" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_128ffxv_di" bpmnElement="Event_128ffxv">
-        <dc:Bounds x="852" y="212" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_0px528y_di" bpmnElement="Event_0px528y">
+        <dc:Bounds x="1092" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0l5fwt1_di" bpmnElement="stage-4">
+        <dc:Bounds x="880" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1fp17al_di" bpmnElement="SequenceFlow_1fp17al">
         <di:waypoint x="215" y="117" />
@@ -74,15 +64,17 @@
         <di:waypoint x="390" y="117" />
         <di:waypoint x="470" y="117" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0e9rxzn_di" bpmnElement="Flow_0e9rxzn">
+      <bpmndi:BPMNEdge id="Flow_09rtitz_di" bpmnElement="Flow_09rtitz">
         <di:waypoint x="570" y="117" />
-        <di:waypoint x="620" y="117" />
-        <di:waypoint x="620" y="230" />
-        <di:waypoint x="660" y="230" />
+        <di:waypoint x="670" y="117" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0002eqa_di" bpmnElement="Flow_0002eqa">
-        <di:waypoint x="760" y="230" />
-        <di:waypoint x="852" y="230" />
+      <bpmndi:BPMNEdge id="Flow_117p5pl_di" bpmnElement="Flow_117p5pl">
+        <di:waypoint x="770" y="117" />
+        <di:waypoint x="880" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10ibmzi_di" bpmnElement="Flow_10ibmzi">
+        <di:waypoint x="980" y="117" />
+        <di:waypoint x="1092" y="117" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

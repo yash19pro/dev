@@ -1,11 +1,9 @@
-spring.datasource.url: jdbc:h2:file:./camunda-h2-database
-
 camunda:
     bpm:
         admin-user:
             id: demo
             password: demo
-        auto-deployment-enabled: false
+        auto-deployment-enabled: true
 
 server:
     port: 8081
@@ -15,7 +13,7 @@ spring:
         console:
             enabled: true
     datasource:
-        url: jdbc:h2:mem:camunda;DB_CLOSE_ON_EXIT=FALSE
+        url: jdbc:h2:file:./camunda-h2-database
         driverClassName: org.h2.Driver
         username: sa
         password:
