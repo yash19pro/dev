@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "com.learn.camunda.Application",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "WebsocketApplication",
             "request": "launch",
             "mainClass": "com.spring.websocket.WebsocketApplication"
