@@ -2,8 +2,8 @@ package com.yash.transactional.service;
 
 import com.yash.transactional.models.User;
 import com.yash.transactional.repository.UserRepository;
-import org.camunda.bpm.engine.RepositoryService;
 import org.camunda.bpm.engine.RuntimeService;
+import org.camunda.bpm.engine.TaskService;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,11 +17,13 @@ public class GenericService {
 
     private final UserRepository userRepository;
     private final RuntimeService runtimeService;
+    private final TaskService taskService;
     private final Boolean doFail = true;
 
-    public GenericService(UserRepository userRepository, RuntimeService runtimeService) {
+    public GenericService(UserRepository userRepository, RuntimeService runtimeService, TaskService taskService) {
         this.userRepository = userRepository;
         this.runtimeService = runtimeService;
+        this.taskService = taskService;
     }
 
     public List<User> getAllUsers() {
@@ -78,11 +80,14 @@ public class GenericService {
         String process1 = startProcess("testProcess");
         String process2 = startProcess("testProcess");
 
+        runtimeService.setVariable(process1, "yash", "patel");
+        taskService.complete(taskService.createTaskQuery().processInstanceId(process1).singleResult().getId());
+
         System.out.println("process1 = " + process1);
         System.out.println("process2 = " + process2);
     }
 
-//    @Transactional
+    @Transactional
     public void testingScenario1() {
         // adding data in the custom table first and then in the camunda tables
 
@@ -99,7 +104,7 @@ public class GenericService {
         startingProcesses();
     }
 
-//    @Transactional
+    @Transactional
     public void testingScenario2() {
         // adding data in the camunda tables first and then in the custom table
 

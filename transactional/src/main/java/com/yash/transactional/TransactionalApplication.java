@@ -34,4 +34,7 @@ public class TransactionalApplication {
 *
 * query process instances
 * 	-> select * from ACT_HI_PROCINST;
+*
+* query variables
+* 	-> select * from ACT_RU_VARIABLE;
 * */
