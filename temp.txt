@@ -1,25 +1,10 @@
-As part of a hygiene initiative, I migrated Ivy+Ant projects (BankAccounts from GBS, and containerds, containerservice, gnmimservice, marketinfoservice, and meeraweb from GNM) to Gradle projects. In the BankAccount API project, I played a key role in delivering the SuspenseAccountOpen workflow in Camunda and in developing a module that serves both common and external services (external-connector). Additionally, I migrated one of the run-scripts to Spring Scheduler, allowing us to eliminate the dependency on the run-script. I also integrated a scheduler locking mechanism to prevent redundant processing.
-
-Furthermore, I expanded my knowledge of Docker and Kubernetes through courses provided by Pluralsight.
-
+Tong consistently contributes to the overall success of the team and business by actively engaging in key initiatives and driving positive outcomes. He delivers solutions that strike a careful balance between the needs of the firm and those of its clients and stakeholders, ensuring that both are met with a high standard of quality. Tong is a strong team player who works collaboratively with others, always fostering open communication and cooperation to achieve shared objectives efficiently and effectively. His ability to align individual efforts with broader business goals makes him a valuable asset to the team.
 
 ---
 
-
-I refactored parts of the code in the BankAccounts API project to make it reusable across other modules, reducing redundancy and significantly improving code reusability. 
-
-As part of a hygiene initiative, I migrated Ivy+Ant projects (BankAccounts from GBS, and containerds, containerservice, gnmimservice, marketinfoservice, and meeraweb from GNM) to Gradle projects. Additionally, I implemented Spring Scheduler for recurring tasks, eliminating the dependency on run-scripts.
+Tong proactively identifies potential risks and escalates them when necessary to ensure timely resolution and safeguard the firm's interests. Tong effectively engages with colleagues in control functions such as compliance, risk management, and internal audit, working collaboratively to ensure the firm's operations remain compliant and secure. His proactive approach and strong sense of responsibility make him a trusted and reliable team member.
 
 ---
 
-As part of a modernization effort, I worked on a proof of concept (POC) for Camunda. I created comprehensive documentation covering all the key features of Camunda, along with the necessary knowledge for migrating the JBPM workflow to Camunda.
+Tong consistently takes accountability for his actions and responsibilities, ensuring that tasks are completed with integrity and diligence. He actively contributes to fostering an inclusive and diverse work environment, recognizing the value that different perspectives bring to the team. Tong treats everyone with respect, embodying the Firm's values in his interactions and serving as a role model for colleagues. His commitment to upholding the Firm's culture of collaboration, respect, and inclusivity makes him a trusted leader and team player.
 
-I also completed a UiPath course provided by the firm and assisted an intern working with me in setting up the project and deploying an unattended bot to the environment for use.
-
----
-
-Some of the skills I would like to focus on more in the coming year are:
-
-1. **Task Management:** I feel that my time could have been used more efficiently, as I struggled with organizing tasks effectively.
-   
-2. **Clean Code:** Leveraging design patterns will help me write code that is more efficient, effective, and easier to understand. This will allow others to quickly grasp the implemented logic and the overall project without wasting time.
