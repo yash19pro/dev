@@ -1,0 +1,25 @@
+As part of a hygiene initiative, I migrated Ivy+Ant projects (BankAccounts from GBS, and containerds, containerservice, gnmimservice, marketinfoservice, and meeraweb from GNM) to Gradle projects. In the BankAccount API project, I played a key role in delivering the SuspenseAccountOpen workflow in Camunda and in developing a module that serves both common and external services (external-connector). Additionally, I migrated one of the run-scripts to Spring Scheduler, allowing us to eliminate the dependency on the run-script. I also integrated a scheduler locking mechanism to prevent redundant processing.
+
+Furthermore, I expanded my knowledge of Docker and Kubernetes through courses provided by Pluralsight.
+
+
+---
+
+
+I refactored parts of the code in the BankAccounts API project to make it reusable across other modules, reducing redundancy and significantly improving code reusability. 
+
+As part of a hygiene initiative, I migrated Ivy+Ant projects (BankAccounts from GBS, and containerds, containerservice, gnmimservice, marketinfoservice, and meeraweb from GNM) to Gradle projects. Additionally, I implemented Spring Scheduler for recurring tasks, eliminating the dependency on run-scripts.
+
+---
+
+As part of a modernization effort, I worked on a proof of concept (POC) for Camunda. I created comprehensive documentation covering all the key features of Camunda, along with the necessary knowledge for migrating the JBPM workflow to Camunda.
+
+I also completed a UiPath course provided by the firm and assisted an intern working with me in setting up the project and deploying an unattended bot to the environment for use.
+
+---
+
+Some of the skills I would like to focus on more in the coming year are:
+
+1. **Task Management:** I feel that my time could have been used more efficiently, as I struggled with organizing tasks effectively.
+   
+2. **Clean Code:** Leveraging design patterns will help me write code that is more efficient, effective, and easier to understand. This will allow others to quickly grasp the implemented logic and the overall project without wasting time.
