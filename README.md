@@ -1,3 +1,4 @@
+
 ### **Module 1: Introduction to Pythonic Code**  
 
 ### **1️⃣ What is Pythonic Code?**  
@@ -809,3 +810,461 @@ print(pairs)
 🔹 Efficient looping & recursion  
 
 Would you like **more advanced problems**, or should I create **a structured test** using these? 🚀
+
+### **Lambda Function Exercises with Solutions** 🚀  
+
+Lambda functions (anonymous functions) are widely used in Python for short, inline functions. These exercises will reinforce their usage in different contexts like `map()`, `filter()`, `sorted()`, and list comprehensions.
+
+---
+
+## **1️⃣ Square of a Number (Basic Lambda)**  
+🔹 **Problem:** Write a lambda function that takes a number and returns its square.
+
+#### ✅ **Solution:**  
+```python
+square = lambda x: x ** 2
+print(square(5))  # Output: 25
+```
+
+---
+
+## **2️⃣ Sort a List of Tuples by Second Element**  
+🔹 **Problem:** Given a list of tuples, sort them based on the second element using `lambda`.  
+```python
+pairs = [(1, 3), (4, 2), (2, 5), (3, 1)]
+```
+#### ✅ **Solution:**  
+```python
+sorted_pairs = sorted(pairs, key=lambda x: x[1])
+print(sorted_pairs)
+```
+🔹 **Expected Output:**  
+```python
+[(3, 1), (4, 2), (1, 3), (2, 5)]
+```
+
+---
+
+## **3️⃣ Filter Even Numbers from a List (`filter()`)**  
+🔹 **Problem:** Use `lambda` with `filter()` to extract even numbers from a list.  
+
+```python
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+#### ✅ **Solution:**  
+```python
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)
+```
+🔹 **Expected Output:**  
+```python
+[2, 4, 6, 8]
+```
+
+---
+
+## **4️⃣ Convert a List of Strings to Uppercase (`map()`)**  
+🔹 **Problem:** Use `lambda` with `map()` to convert all words to uppercase.  
+```python
+words = ["hello", "world", "python"]
+```
+#### ✅ **Solution:**  
+```python
+uppercase_words = list(map(lambda word: word.upper(), words))
+print(uppercase_words)
+```
+🔹 **Expected Output:**  
+```python
+['HELLO', 'WORLD', 'PYTHON']
+```
+
+---
+
+## **5️⃣ Find the Maximum of Two Numbers**  
+🔹 **Problem:** Write a lambda function to return the maximum of two numbers.  
+
+#### ✅ **Solution:**  
+```python
+max_number = lambda a, b: a if a > b else b
+print(max_number(10, 20))  # Output: 20
+```
+
+---
+
+## **6️⃣ Extract First Letter of Each Word (`map()`)**  
+🔹 **Problem:** Extract the first letter of each word from a list using `map()`.  
+```python
+words = ["apple", "banana", "cherry"]
+```
+#### ✅ **Solution:**  
+```python
+first_letters = list(map(lambda word: word[0], words))
+print(first_letters)
+```
+🔹 **Expected Output:**  
+```python
+['a', 'b', 'c']
+```
+
+---
+
+## **7️⃣ Find Words Longer than `n` (`filter()`)**  
+🔹 **Problem:** Use `lambda` and `filter()` to get words longer than 4 characters.  
+```python
+words = ["dog", "elephant", "cat", "giraffe"]
+```
+#### ✅ **Solution:**  
+```python
+long_words = list(filter(lambda word: len(word) > 4, words))
+print(long_words)
+```
+🔹 **Expected Output:**  
+```python
+['elephant', 'giraffe']
+```
+
+---
+
+## **8️⃣ Multiply Corresponding Elements of Two Lists (`map()`)**  
+🔹 **Problem:** Multiply elements at the same index from two lists using `map()`.  
+```python
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+```
+#### ✅ **Solution:**  
+```python
+product = list(map(lambda x, y: x * y, list1, list2))
+print(product)
+```
+🔹 **Expected Output:**  
+```python
+[4, 10, 18]
+```
+
+---
+
+## **9️⃣ Sort a List of Dictionaries by a Key (`sorted()`)**  
+🔹 **Problem:** Sort a list of dictionaries based on the `"age"` key.  
+```python
+people = [{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}, {"name": "Charlie", "age": 35}]
+```
+#### ✅ **Solution:**  
+```python
+sorted_people = sorted(people, key=lambda person: person["age"])
+print(sorted_people)
+```
+🔹 **Expected Output:**  
+```python
+[{'name': 'Bob', 'age': 25}, {'name': 'Alice', 'age': 30}, {'name': 'Charlie', 'age': 35}]
+```
+
+---
+
+## **🔟 Count Occurrences of Each Character (`reduce()`)**  
+🔹 **Problem:** Count the frequency of characters in a string using `reduce()`.  
+```python
+from functools import reduce
+
+text = "hello"
+char_count = reduce(lambda acc, char: {**acc, char: acc.get(char, 0) + 1}, text, {})
+print(char_count)
+```
+🔹 **Expected Output:**  
+```python
+{'h': 1, 'e': 1, 'l': 2, 'o': 1}
+```
+
+---
+
+## **BONUS: Custom Sorting (Sort by Last Letter of Word)**  
+🔹 **Problem:** Sort a list of words based on their last letter.  
+```python
+words = ["banana", "apple", "cherry", "blueberry"]
+```
+#### ✅ **Solution:**  
+```python
+sorted_words = sorted(words, key=lambda word: word[-1])
+print(sorted_words)
+```
+🔹 **Expected Output:**  
+```python
+['banana', 'apple', 'blueberry', 'cherry']
+```
+
+---
+
+### **Final Thoughts** 🚀  
+These exercises cover **lambda functions** in different real-world applications like:  
+✅ `map()`, `filter()`, and `reduce()`  
+✅ `sorted()` for custom sorting  
+✅ String and list manipulations  
+
+Would you like **more advanced challenges**, or should I create a **structured test** with lambda-based coding problems? 💡
+
+
+Here are some **real-world coding challenges using decorators** that focus on logging, authentication, memoization, timing, and more. These will **help interns understand the power of decorators** in Python.
+
+---
+
+## **1️⃣ Logging Function Calls (Basic Decorator)**
+🔹 **Problem:** Write a decorator that logs the function name and arguments before calling it.
+
+#### ✅ **Solution:**
+```python
+def log_function(func):
+    def wrapper(*args, **kwargs):
+        print(f"Calling {func.__name__} with arguments: {args}, {kwargs}")
+        return func(*args, **kwargs)
+    return wrapper
+
+@log_function
+def add(a, b):
+    return a + b
+
+print(add(5, 3))  # Output: Calling add with arguments: (5, 3), {} → 8
+```
+
+---
+
+## **2️⃣ Measuring Execution Time**
+🔹 **Problem:** Write a decorator that measures the execution time of a function.
+
+#### ✅ **Solution:**
+```python
+import time
+
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(f"{func.__name__} took {end_time - start_time:.5f} seconds")
+        return result
+    return wrapper
+
+@timer
+def slow_function():
+    time.sleep(2)
+    return "Finished"
+
+print(slow_function())  
+# Output: slow_function took ~2.000x seconds → Finished
+```
+
+---
+
+## **3️⃣ Authentication Check**
+🔹 **Problem:** Create a decorator that checks if a user is logged in before executing the function.
+
+#### ✅ **Solution:**
+```python
+def authenticate(user):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            if not user.get("is_logged_in"):
+                print("Access Denied: User is not logged in!")
+                return
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+user = {"name": "Alice", "is_logged_in": False}
+
+@authenticate(user)
+def view_dashboard():
+    print("Welcome to the dashboard!")
+
+view_dashboard()  # Output: Access Denied: User is not logged in!
+
+user["is_logged_in"] = True
+view_dashboard()  # Output: Welcome to the dashboard!
+```
+
+---
+
+## **4️⃣ Caching Function Results (Memoization with `functools.lru_cache`)**
+🔹 **Problem:** Optimize Fibonacci calculations using an LRU cache.
+
+#### ✅ **Solution:**
+```python
+from functools import lru_cache
+
+@lru_cache(maxsize=100)
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+print(fibonacci(50))  # Output: 12586269025 (Computed much faster)
+```
+
+---
+
+## **5️⃣ Retry Mechanism for Unreliable APIs**
+🔹 **Problem:** Write a decorator that retries a function if it fails.
+
+#### ✅ **Solution:**
+```python
+import random
+import time
+
+def retry(times):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for _ in range(times):
+                try:
+                    return func(*args, **kwargs)
+                except Exception as e:
+                    print(f"Error: {e}, Retrying...")
+                    time.sleep(1)
+            print("Max retries reached. Exiting.")
+        return wrapper
+    return decorator
+
+@retry(3)
+def unstable_api():
+    if random.random() < 0.7:
+        raise Exception("API Failure!")
+    return "Success!"
+
+print(unstable_api())  
+# Output: If it fails, retries up to 3 times before giving up.
+```
+
+---
+
+## **6️⃣ Enforce Function Argument Types**
+🔹 **Problem:** Write a decorator that ensures function arguments match expected types.
+
+#### ✅ **Solution:**
+```python
+def enforce_types(*expected_types):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for i, arg in enumerate(args):
+                if not isinstance(arg, expected_types[i]):
+                    raise TypeError(f"Argument {i} must be {expected_types[i].__name__}")
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+@enforce_types(int, int)
+def add(a, b):
+    return a + b
+
+print(add(5, 3))  # Output: 8
+# print(add("5", 3))  # Raises TypeError: Argument 0 must be int
+```
+
+---
+
+## **7️⃣ Restrict Function Calls (Rate Limiting)**
+🔹 **Problem:** Write a decorator that allows a function to be called at most **N** times per second.
+
+#### ✅ **Solution:**
+```python
+import time
+
+def rate_limiter(calls_per_second):
+    interval = 1.0 / calls_per_second
+    def decorator(func):
+        last_called = [0.0]
+
+        def wrapper(*args, **kwargs):
+            elapsed = time.time() - last_called[0]
+            if elapsed < interval:
+                time.sleep(interval - elapsed)
+            last_called[0] = time.time()
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+@rate_limiter(2)  # Max 2 calls per second
+def say_hello():
+    print("Hello!")
+
+for _ in range(5):
+    say_hello()
+```
+🔹 **Expected Output:** The function executes at a controlled rate.
+
+---
+
+## **8️⃣ Convert Function Output to JSON**
+🔹 **Problem:** Write a decorator that converts a function’s return value to JSON format.
+
+#### ✅ **Solution:**
+```python
+import json
+
+def to_json(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return json.dumps(result)
+    return wrapper
+
+@to_json
+def get_data():
+    return {"name": "Alice", "age": 25}
+
+print(get_data())  # Output: '{"name": "Alice", "age": 25}'
+```
+
+---
+
+## **9️⃣ Ensure Function Output is Non-Empty**
+🔹 **Problem:** Write a decorator that ensures a function’s return value is not `None` or empty.
+
+#### ✅ **Solution:**
+```python
+def ensure_non_empty(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        if not result:
+            raise ValueError("Function returned empty result!")
+        return result
+    return wrapper
+
+@ensure_non_empty
+def get_username():
+    return ""
+
+# print(get_username())  # Raises ValueError: Function returned empty result!
+```
+
+---
+
+## **🔟 Trace Function Calls with Indentation**
+🔹 **Problem:** Write a decorator that visually traces function calls.
+
+#### ✅ **Solution:**
+```python
+def trace(func):
+    def wrapper(*args, **kwargs):
+        print(f"> Calling {func.__name__}({args}, {kwargs})")
+        result = func(*args, **kwargs)
+        print(f"< {func.__name__} returned {result}")
+        return result
+    return wrapper
+
+@trace
+def multiply(a, b):
+    return a * b
+
+print(multiply(4, 5))
+# Output:
+# > Calling multiply((4, 5), {})
+# < multiply returned 20
+```
+
+---
+
+### **🚀 Summary: Why These Decorators Matter?**
+These decorators solve **real-world problems**, including:  
+✅ **Logging function calls**  
+✅ **Performance optimization (caching, timing, retrying API calls)**  
+✅ **Security (authentication check)**  
+✅ **Data validation (argument types, non-empty return values)**  
+✅ **Rate limiting (prevent spamming APIs)**  
+
+Would you like **more exercises** or a **structured test** on decorators? 💡🚀
